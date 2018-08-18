@@ -1,6 +1,6 @@
 import React from "react";
 
-import Btn from "../../shared/btn";
+import Btn from "../../shared/Btn";
 
 const FACEBOOK_BLUE = "#4267B2";
 

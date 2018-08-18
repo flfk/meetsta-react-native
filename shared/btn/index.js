@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import BtnText from "./btn-text";
-import Wrapper from "./wrapper";
+import BtnText from "./BtnText";
+import Wrapper from "./Wrapper";
 
 const propTypes = {
   title: PropTypes.string.isRequired,
