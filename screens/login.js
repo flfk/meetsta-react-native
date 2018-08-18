@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 import BtnGroup from "../blocks/login-btns";
+import LogoImage from "../elements/logo-24px";
+import Logo from "../assets/logo-meetsta-24px.png";
 
 const propTypes = {};
 
@@ -15,15 +18,21 @@ class Login extends React.Component {
 
   render() {
     return (
-      <View>
+      <Container>
+        <LogoImage source={Logo} />
         <BtnGroup>
           <BtnGroup.SignUp title="Sign Up" />
           <BtnGroup.Fb title="Sign In With Facebook" />
           <BtnGroup.Login title="Log In" />
         </BtnGroup>
-      </View>
+      </Container>
     );
   }
 }
+
+const Container = styled.View`
+  height: 100%;
+  justify-content: center;
+`;
 
 export default Login;

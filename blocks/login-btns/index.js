@@ -5,7 +5,6 @@ import BtnFb from "./btn-login-fb";
 import BtnSec from "../../elements/btn-secondary";
 
 const LoginBtns = styled.View`
-  border: 2px solid red;
   padding: 18px;
   height: 240;
   justify-content: space-around;
