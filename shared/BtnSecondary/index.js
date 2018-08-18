@@ -1,7 +1,7 @@
 import React from "react";
 
 import Btn from "../Btn";
-import { COLORS } from "../../styles/style-guide";
+import COLORS from "../../styles/Colors";
 
 const BtnSec = ({ title, onPress }) => {
   return (

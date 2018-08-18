@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS } from "../../styles/style-guide";
+import COLORS from "../../styles/Colors";
 
 const Wrapper = styled.TouchableOpacity`
   padding: 4px 8px;

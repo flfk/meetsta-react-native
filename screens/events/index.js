@@ -2,6 +2,7 @@ import React from "react";
 import { SectionList, Text } from "react-native";
 import PropTypes from "prop-types";
 
+import Cell from "./Cell";
 import Container from "./Container";
 import SectionHeader from "./SectionHeader";
 import BtnSec from "../../shared/BtnSecondary";
@@ -38,11 +39,11 @@ class Login extends React.Component {
   };
 
   renderItem = ({ item, index, section }) => {
-    return <Text key={index}>{item}</Text>;
+    return <Cell key={index}>{item}</Cell>;
   };
 
   renderSectionHeader = ({ section: { title } }) => {
-    return <Text style={{ fontWeight: "bold" }}>{title}</Text>;
+    return <SectionHeader>{title}</SectionHeader>;
   };
 
   render() {

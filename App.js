@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 
-import Events from "./screens/events";
-import Login from "./screens/login";
+import Events from "./screens/Events";
+import Login from "./screens/Login";
 
 export default class App extends React.Component {
   render() {
