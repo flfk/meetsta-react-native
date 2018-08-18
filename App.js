@@ -1,13 +1,15 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+
+import Events from "./screens/Events";
+import Login from "./screens/Login";
 
 export default class App extends React.Component {
   render() {
     return (
       <View>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Events />
       </View>
     );
   }
 }
-
