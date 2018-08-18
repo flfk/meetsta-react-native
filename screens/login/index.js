@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import BtnGroup from "./login-btns";
-import { Container, ImageWrapper } from "./styles";
+import Container from "./container";
+import ImageWrapper from "./image-wrapper";
 import Logo from "../../assets/logo-meetsta-24px.png";
 
 const propTypes = {};
