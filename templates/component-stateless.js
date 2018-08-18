@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import { View } from "react-native";
 
 const propTypes = {};
 
 const defaultProps = {};
 
 const XX = props => {
-  return <div />;
+  return <View />;
 };
 
 export default XX;
