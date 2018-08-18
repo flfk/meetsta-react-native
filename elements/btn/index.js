@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import Wrapper from "./wrapper";
 import BtnText from "./btn-text";
+import Wrapper from "./wrapper";
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -18,5 +18,8 @@ const Btn = ({ title, onPress }) => {
     </Wrapper>
   );
 };
+
+Btn.Wrapper = Wrapper;
+Btn.BtnText = BtnText;
 
 export default Btn;

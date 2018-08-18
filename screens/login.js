@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 
 import Btn from "../elements/btn";
+import BtnSec from "../elements/btn-secondary";
 
 const propTypes = {};
 
@@ -16,8 +17,8 @@ class Login extends React.Component {
   render() {
     return (
       <View>
-        <Text>Hello, World</Text>
-        <Btn title="testing" onPress={() => true} />
+        <Btn title="Sign Up" onPress={() => true} />
+        <BtnSec title="Log In" onPress={() => true} />
       </View>
     );
   }
