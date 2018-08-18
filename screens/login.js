@@ -2,8 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 
-import Btn from "../elements/btn";
-import BtnSec from "../elements/btn-secondary";
+import BtnGroup from "../blocks/login-btns";
 
 const propTypes = {};
 
@@ -17,8 +16,11 @@ class Login extends React.Component {
   render() {
     return (
       <View>
-        <Btn title="Sign Up" onPress={() => true} />
-        <BtnSec title="Log In" onPress={() => true} />
+        <BtnGroup>
+          <BtnGroup.SignUp title="Sign Up" />
+          <BtnGroup.Fb title="Sign In With Facebook" />
+          <BtnGroup.Login title="Log In" />
+        </BtnGroup>
       </View>
     );
   }
