@@ -15,14 +15,21 @@ class Login extends React.Component {
     super();
   }
 
+  toEventScreen = () => {
+    this.props.navigation.navigate("RouteEvents");
+  };
+
   render() {
     return (
       <Container>
         <ImageWrapper source={Logo} />
         <BtnGroup>
-          <BtnGroup.SignUp title="Sign Up" />
-          <BtnGroup.Fb title="Sign In With Facebook" />
-          <BtnGroup.Login title="Log In" />
+          <BtnGroup.SignUp title="Sign Up" onPress={this.toEventScreen} />
+          <BtnGroup.Fb
+            title="Sign In With Facebook"
+            onPress={this.toEventScreen}
+          />
+          <BtnGroup.Login title="Log In" onPress={this.toEventScreen} />
         </BtnGroup>
       </Container>
     );
