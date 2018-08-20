@@ -21,12 +21,16 @@ class Login extends React.Component {
     this.props.navigation.navigate("Main");
   };
 
+  SignUp = () => {
+    this.props.navigation.navigate("SignUp");
+  };
+
   render() {
     return (
       <Container>
         <ImageWrapper source={Logo} />
         <BtnGroup>
-          <BtnGroup.SignUp title="Sign Up" onPress={this.Login} />
+          <BtnGroup.SignUp title="Sign Up" onPress={this.SignUp} />
           <BtnGroup.Fb title="Sign In With Facebook" onPress={this.Login} />
           <BtnGroup.Login title="Log In" onPress={this.Login} />
         </BtnGroup>
