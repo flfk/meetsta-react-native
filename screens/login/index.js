@@ -18,7 +18,7 @@ class Login extends React.Component {
   }
 
   Login = () => {
-    this.props.navigation.navigate("Events");
+    this.props.navigation.navigate("Main");
   };
 
   render() {
