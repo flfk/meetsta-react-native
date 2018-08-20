@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import BtnGroup from "./LoginBtns";
-import Container from "./Container";
+import Container from "../../shared/Container";
 import ImageWrapper from "./ImageWrapper";
 import Logo from "../../assets/logo-meetsta-24px.png";
 

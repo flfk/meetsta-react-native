@@ -3,7 +3,8 @@ import { SectionList, Text } from "react-native";
 import PropTypes from "prop-types";
 
 import Cell from "./Cell";
-import Container from "./Container";
+import Container from "../../shared/Container";
+import ListEvents from "./ListEvents";
 import SectionHeader from "./SectionHeader";
 import BtnSec from "../../shared/BtnSecondary";
 
@@ -59,7 +60,7 @@ class Events extends React.Component {
   render() {
     return (
       <Container>
-        <SectionList
+        <ListEvents
           renderItem={this.renderItem}
           renderSectionHeader={this.renderSectionHeader}
           sections={this.state.events}
