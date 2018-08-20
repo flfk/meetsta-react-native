@@ -10,5 +10,3 @@ const XX = props => {
 };
 
 export default XX;
-
-import styled from "styled-components";

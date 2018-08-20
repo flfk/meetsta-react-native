@@ -1,21 +1,33 @@
-import { createSwitchNavigator } from "react-navigation";
+import { createSwitchNavigator, createStackNavigator } from "react-navigation";
 import React from "react";
-import { View } from "react-native";
 
+import ScreenAddEvent from "./screens/AddEvent";
 import ScreenEvents from "./screens/Events";
 import ScreenLogin from "./screens/Login";
 
-const AppNavigator = createSwitchNavigator({
-  RouteLogin: ScreenLogin,
-  RouteEvents: ScreenEvents
-});
+const NavigatorMain = createStackNavigator(
+  {
+    AddEvent: ScreenAddEvent,
+    Events: ScreenEvents
+  },
+  {
+    initialRouteName: "Events"
+  }
+);
+
+const AppNavigator = createSwitchNavigator(
+  {
+    Login: ScreenLogin,
+    Events: ScreenEvents,
+    Main: NavigatorMain
+  },
+  {
+    initialRouteName: "Login"
+  }
+);
 
 export default class App extends React.Component {
   render() {
-    return (
-      <View>
-        <AppNavigator />
-      </View>
-    );
+    return <AppNavigator />;
   }
 }
