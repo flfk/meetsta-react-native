@@ -22,13 +22,19 @@ const propTypes = {};
 
 const defaultProps = {};
 
-class Login extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      events: []
-    };
-  }
+class Events extends React.Component {
+  static navigationOptions = {};
+
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     events: []
+  //   };
+  // }
+
+  state = {
+    events: []
+  };
 
   componentDidMount() {
     this.getData();
@@ -36,6 +42,10 @@ class Login extends React.Component {
 
   getData = data => {
     this.setState({ events: TEST_DATA });
+  };
+
+  goToAddEvent = () => {
+    this.props.navigation.navigate("AddEvent");
   };
 
   renderItem = ({ item, index, section }) => {
@@ -55,10 +65,10 @@ class Login extends React.Component {
           sections={this.state.events}
           keyExtractor={(item, index) => item + index}
         />
-        <BtnSec title="Add confirmation code" />
+        <BtnSec title="Add confirmation code" onPress={this.goToAddEvent} />
       </Container>
     );
   }
 }
 
-export default Login;
+export default Events;
