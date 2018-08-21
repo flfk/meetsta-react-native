@@ -9,12 +9,19 @@ const defaultProps = {};
 
 class FormGroupText extends React.Component {
   static propTypes = {
-    labelTxt: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    placeholder: PropTypes.string
   };
 
   state = {
     text: "Hello World"
   };
+
+  componentDidMount() {
+    console.log(this.props);
+    this.setState({ text: this.props.placeholder });
+  }
 
   handleTextChange = text => {
     this.setState({ text });
@@ -23,7 +30,7 @@ class FormGroupText extends React.Component {
   render() {
     return (
       <View>
-        <InputLabel>InputLabel</InputLabel>
+        <InputLabel>{this.props.label}</InputLabel>
         <InputText
           value={this.state.text}
           onChangeText={this.handleTextChange}

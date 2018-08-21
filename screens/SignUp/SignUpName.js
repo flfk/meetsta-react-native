@@ -5,6 +5,7 @@ import { TextInput, Button } from "react-native";
 import HeaderOne from "../../shared/HeaderOne";
 import Container from "../../shared/Container";
 import FormGroupText from "../../shared/FormGroupText";
+import Btn from "../../shared/Btn";
 
 const propTypes = {};
 
@@ -42,7 +43,8 @@ class ScreenSignUpName extends React.Component {
     return (
       <Container>
         <HeaderOne>Tell us your name</HeaderOne>
-        <FormGroupText />
+        <FormGroupText label="Name" placeholder="Placeholder" />
+        <Btn title="Next" />
       </Container>
     );
   }
