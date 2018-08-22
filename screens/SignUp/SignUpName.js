@@ -1,50 +1,51 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TextInput, Button } from "react-native";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import HeaderOne from "../../shared/HeaderOne";
-import Container from "../../shared/Container";
-import FormGroupText from "../../shared/FormGroupText";
-import Btn from "../../shared/Btn";
+import HeaderOne from '../../shared/HeaderOne';
+import Container from './Container';
+import FormGroupText from '../../shared/FormGroupText';
+import Btn from '../../shared/Btn';
 
 const propTypes = {};
 
 const defaultProps = {};
 
 class ScreenSignUpName extends React.Component {
-  // state = {
-  //   nameFirst: "Placeholder - first",
-  //   nameLast: "Placeholder - last"
-  // };
-
-  // handleNameFirstUpdate = nameFirst => {
-  //   this.setState({ nameFirst });
-  // };
-
-  // handleNameLastUpdate = nameLast => {
-  //   this.setState({ nameLast });
-  // };
-
-  goToNext = () => {
-    this.props.navigation.navigate("SignUpEmail");
+  state = {
+    nameFirst: 'Sammy',
+    nameLast: 'Alderson',
   };
 
-  // <InputText
-  //         value={this.state.nameFirst}
-  //         onChangeText={this.handleNameFirstUpdate}
-  //       />
-  //       <InputText
-  //         value={this.state.nameLast}
-  //         onChangeText={this.handleNameLastUpdate}
-  //       />
-  //       <Button title="next" onPress={this.goToNext} />
+  handleNameFirstUpdate = nameFirst => {
+    this.setState({ nameFirst });
+  };
+
+  handleNameLastUpdate = nameLast => {
+    this.setState({ nameLast });
+  };
+
+  goToNext = () => {
+    this.props.navigation.navigate('SignUpEmail', {
+      nameFirst: this.state.nameFirst,
+      nameLast: this.state.nameLast,
+    });
+  };
 
   render() {
     return (
       <Container>
         <HeaderOne>Tell us your name</HeaderOne>
-        <FormGroupText label="Name" placeholder="Placeholder" />
-        <Btn title="Next" />
+        <FormGroupText
+          label={'First Name'}
+          value={this.state.nameFirst}
+          handler={this.handleNameFirstUpdate}
+        />
+        <FormGroupText
+          label={'Last Name'}
+          value={this.state.nameLast}
+          handler={this.handleNameLastUpdate}
+        />
+        <Btn title="Next" onPress={this.goToNext} />
       </Container>
     );
   }

@@ -1,45 +1,43 @@
-import { createSwitchNavigator, createStackNavigator } from "react-navigation";
+import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 
-import ScreenAddEvent from "./screens/AddEvent";
-import ScreenEvents from "./screens/Events";
-import ScreenLogin from "./screens/Login";
+import ScreenAddEvent from './screens/AddEvent';
+import ScreenEvents from './screens/Events';
+import ScreenLogin from './screens/Login';
 
-import ScreenSignUpBirthday from "./screens/SignUp/SignUpBirthday";
-import ScreenSignUpEmail from "./screens/SignUp/SignUpEmail";
-import ScreenSignUpName from "./screens/SignUp/SignUpName";
-import ScreenSignUpPassword from "./screens/SignUp/SignUpPassword";
+import ScreenSignUpEmail from './screens/SignUp/SignUpEmail';
+import ScreenSignUpName from './screens/SignUp/SignUpName';
+import ScreenSignUpPassword from './screens/SignUp/SignUpPassword';
 
 const NavigatorMain = createStackNavigator(
   {
     AddEvent: ScreenAddEvent,
-    Events: ScreenEvents
+    Events: ScreenEvents,
   },
   {
-    initialRouteName: "Events"
-  }
+    initialRouteName: 'Events',
+  },
 );
 
 const NavigatorSignUp = createStackNavigator(
   {
-    SignUpBirthday: ScreenSignUpBirthday,
     SignUpEmail: ScreenSignUpEmail,
     SignUpName: ScreenSignUpName,
-    SignUpPassword: ScreenSignUpPassword
+    SignUpPassword: ScreenSignUpPassword,
   },
   {
-    initialRouteName: "SignUpName"
-  }
+    initialRouteName: 'SignUpName',
+  },
 );
 
 const AppNavigator = createSwitchNavigator(
   {
     Login: ScreenLogin,
     Main: NavigatorMain,
-    SignUp: NavigatorSignUp
+    SignUp: NavigatorSignUp,
   },
   {
-    initialRouteName: "Login"
-  }
+    initialRouteName: 'Login',
+  },
 );
 
 export default AppNavigator;

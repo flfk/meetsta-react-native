@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import BtnGroup from "./LoginBtns";
-import Container from "../../shared/Container";
-import ImageWrapper from "./ImageWrapper";
-import Logo from "../../assets/logo-meetsta-24px.png";
+import BtnGroup from './LoginBtns';
+import Container from '../../shared/Container';
+import ImageWrapper from './ImageWrapper';
+import Logo from '../../assets/logo-meetsta-24px.png';
 
 const propTypes = {};
 
@@ -18,11 +18,11 @@ class Login extends React.Component {
   }
 
   Login = () => {
-    this.props.navigation.navigate("Main");
+    this.props.navigation.navigate('Main');
   };
 
   SignUp = () => {
-    this.props.navigation.navigate("SignUp");
+    this.props.navigation.navigate('SignUp');
   };
 
   render() {

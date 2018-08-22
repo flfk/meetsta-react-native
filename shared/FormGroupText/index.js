@@ -9,22 +9,15 @@ const defaultProps = {};
 
 class FormGroupText extends React.Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    placeholder: PropTypes.string
+    value: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    secureTextEntry: PropTypes.bool
   };
 
-  state = {
-    text: "Hello World"
-  };
-
-  componentDidMount() {
-    console.log(this.props);
-    this.setState({ text: this.props.placeholder });
-  }
-
-  handleTextChange = text => {
-    this.setState({ text });
+  static defaultProps = {
+    placeholder: "",
+    secureTextEntry: false
   };
 
   render() {
@@ -32,8 +25,9 @@ class FormGroupText extends React.Component {
       <View>
         <InputLabel>{this.props.label}</InputLabel>
         <InputText
-          value={this.state.text}
-          onChangeText={this.handleTextChange}
+          value={this.props.value}
+          onChangeText={this.props.handler}
+          secureTextEntry={this.props.secureTextEntry}
         />
       </View>
     );
