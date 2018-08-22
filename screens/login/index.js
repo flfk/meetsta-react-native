@@ -17,7 +17,7 @@ class Login extends React.Component {
     super();
   }
 
-  Login = () => {
+  Logins = () => {
     this.props.navigation.navigate('Main');
   };
 
