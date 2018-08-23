@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import COLORS from '../../utils/Colors';
 
 const CellEvent = styled.Text`
   height: 40;

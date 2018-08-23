@@ -1,12 +1,12 @@
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 
-import ScreenAddEvent from '../containers/AddEvent';
-import ScreenEvents from '../containers/Events';
-import ScreenLogin from '../containers/Login';
+import ScreenAddEvent from '../containers/ScreenAddEvent';
+import ScreenEvents from '../containers/ScreenEvents';
+import ScreenLogin from '../containers/ScreenLogin';
 
-import ScreenSignUpEmail from '../containers/SignUp/SignUpEmail';
-import ScreenSignUpName from '../containers/SignUp/SignUpName';
-import ScreenSignUpPassword from '../containers/SignUp/SignUpPassword';
+import ScreenSignUpEmail from '../containers/SignUp/ScreenSignUpEmail';
+import ScreenSignUpName from '../containers/SignUp/ScreenSignUpName';
+import ScreenSignUpPassword from '../containers/SignUp/ScreenSignUpPassword';
 
 const NavigatorMain = createStackNavigator(
   {

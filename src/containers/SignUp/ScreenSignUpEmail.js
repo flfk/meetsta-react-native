@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import HeaderOne from '../../components/HeaderOne';
-import Container from './Container';
+import Container from '../../components/ContainerTop';
 import FormGroupText from '../../components/FormGroupText';
 import Btn from '../../components/Btn';
 

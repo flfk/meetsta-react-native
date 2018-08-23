@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, Button } from 'react-native';
 
-import Container from '../../components/Container';
+import Container from '../components/ContainerCentre';
 
 const propTypes = {};
 

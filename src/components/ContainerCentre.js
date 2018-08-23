@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Constants } from "expo";
+import styled from 'styled-components';
+import { Constants } from 'expo';
 
 const Container = styled.View`
   flex: 1;
