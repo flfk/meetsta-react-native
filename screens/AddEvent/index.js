@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { View, Text, Button } from "react-native";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View, Text, Button } from 'react-native';
 
-import Container from "../../shared/Container";
+import Container from '../../shared/Container';
 
 const propTypes = {};
 
