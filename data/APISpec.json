@@ -1,25 +1,25 @@
 {
   "db": {
     // Users collection
-    "Users": [
+    "Users": {
       // User documents
-      {
-        "idUser": "string",
+      "idUser" : {
         "createdAt": "date",
         "email": "string",
         "wasEmailVerified": "bool",
-        "isInfluencer": "string",
+        "nameFirst": "string",
+        "nameLast": "string",
+        "isVerifiedInfluencer": "string",
         "IGHandle": "string",
         "dateOfBirth": "date",
         "imageURL": "string",
         "tickets": [ "idTicket" ]
       }
-    ],
+    },
     // Events collection with event documents
-    "Events": [
+    "Events": {
       // Event documents
-      {
-        "idEvent": "string",
+      "idEvent": {
         "idOrganiser": "string",
         "organiserName": "string",
         "organiserIGHandle": "string",
@@ -39,15 +39,14 @@
           {
             "date": "date",
             "pageViews": "pageViews"
-          }
+          },
         ]
-      }
-    ],
+      },
+    },
     // Tickets collection with ticket documents
-    "Tickets": [
+    "Tickets": {
       // Ticket documents
-      {
-        "idTicket": "string",
+      "idTicket": {
         "idEvent": "string",
         "purchaseDate": "date",
         "purchaseNameFirst": "string",
@@ -58,7 +57,7 @@
         "timeslot": "date",
         "hasStarted": "bool",
       }
-    ]
+    }
   }
 }
 
