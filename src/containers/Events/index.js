@@ -3,11 +3,11 @@ import { SectionList, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Cell from './Cell';
-import Container from '../../shared/Container';
+import Container from '../../components/Container';
 import TEST_DATA_EVENTS from '../../testData/dataEvents';
 import ListEvents from './ListEvents';
 import SectionHeader from './SectionHeader';
-import BtnSec from '../../shared/BtnSecondary';
+import BtnSec from '../../components/BtnSecondary';
 
 const propTypes = {};
 
@@ -17,7 +17,7 @@ class Events extends React.Component {
   static navigationOptions = {};
 
   state = {
-    events: [],
+    events: []
   };
 
   componentDidMount() {

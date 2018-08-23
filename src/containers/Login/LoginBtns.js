@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Btn from "../../shared/Btn";
-import BtnFb from "./BtnLoginFb";
-import BtnSec from "../../shared/BtnSecondary";
+import Btn from '../../components/Btn';
+import BtnFb from './BtnLoginFb';
+import BtnSec from '../../components/BtnSecondary';
 
 const LoginBtns = styled.View`
   padding: 18px;

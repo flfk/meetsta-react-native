@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import COLORS from "../../styles/Colors";
+import styled from 'styled-components';
+import COLORS from '../../utils/Colors';
 
 const SectionHeader = styled.Text`
   height: 25px;

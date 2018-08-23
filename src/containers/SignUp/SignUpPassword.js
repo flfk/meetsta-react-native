@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { View } from "react-native";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
 
-import HeaderOne from "../../shared/HeaderOne";
-import Container from "./Container";
-import FormGroupText from "../../shared/FormGroupText";
-import Btn from "../../shared/Btn";
+import HeaderOne from '../../components/HeaderOne';
+import Container from './Container';
+import FormGroupText from '../../components/FormGroupText';
+import Btn from '../../components/Btn';
 
 const propTypes = {};
 
@@ -13,7 +13,7 @@ const defaultProps = {};
 
 class ScreenSignUpPassword extends React.Component {
   state = {
-    password: "password"
+    password: 'password'
   };
 
   handleEmailUpdate = password => {
@@ -23,15 +23,15 @@ class ScreenSignUpPassword extends React.Component {
   getNavParams = () => {
     const { navigation } = this.props;
     return {
-      nameFirst: navigation.getParam("nameFirst", "NO-NAME-FIRST"),
-      nameLast: navigation.getParam("nameLast", "NO-NAME-LAST"),
-      email: navigation.getParam("email", "NO-EMAIL")
+      nameFirst: navigation.getParam('nameFirst', 'NO-NAME-FIRST'),
+      nameLast: navigation.getParam('nameLast', 'NO-NAME-LAST'),
+      email: navigation.getParam('email', 'NO-EMAIL')
     };
   };
 
   submitUser = () => {
     console.log(this.getNavParams());
-    this.props.navigation.navigate("Main");
+    this.props.navigation.navigate('Main');
   };
 
   render() {
@@ -39,7 +39,7 @@ class ScreenSignUpPassword extends React.Component {
       <Container>
         <HeaderOne>Create a password</HeaderOne>
         <FormGroupText
-          label={"Password"}
+          label={'Password'}
           value={this.state.password}
           handler={this.handleEmailUpdate}
           secureTextEntry={true}

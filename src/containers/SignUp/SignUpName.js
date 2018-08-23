@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HeaderOne from '../../shared/HeaderOne';
+import HeaderOne from '../../components/HeaderOne';
 import Container from './Container';
-import FormGroupText from '../../shared/FormGroupText';
-import Btn from '../../shared/Btn';
+import FormGroupText from '../../components/FormGroupText';
+import Btn from '../../components/Btn';
 
 const propTypes = {};
 
@@ -13,7 +13,7 @@ const defaultProps = {};
 class ScreenSignUpName extends React.Component {
   state = {
     nameFirst: 'Sammy',
-    nameLast: 'Alderson',
+    nameLast: 'Alderson'
   };
 
   handleNameFirstUpdate = nameFirst => {
@@ -27,7 +27,7 @@ class ScreenSignUpName extends React.Component {
   goToNext = () => {
     this.props.navigation.navigate('SignUpEmail', {
       nameFirst: this.state.nameFirst,
-      nameLast: this.state.nameLast,
+      nameLast: this.state.nameLast
     });
   };
 

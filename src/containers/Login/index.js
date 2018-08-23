@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import BtnGroup from './LoginBtns';
-import Container from '../../shared/Container';
+import Container from '../../components/Container';
 import ImageWrapper from './ImageWrapper';
 import Logo from '../../assets/logo-meetsta-24px.png';
 
@@ -17,7 +17,7 @@ class Login extends React.Component {
     super();
   }
 
-  Logins = () => {
+  Login = () => {
     this.props.navigation.navigate('Main');
   };
 

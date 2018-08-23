@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import HeaderOne from '../../shared/HeaderOne';
+import HeaderOne from '../../components/HeaderOne';
 import Container from './Container';
-import FormGroupText from '../../shared/FormGroupText';
-import Btn from '../../shared/Btn';
+import FormGroupText from '../../components/FormGroupText';
+import Btn from '../../components/Btn';
 
 const propTypes = {};
 
@@ -13,7 +13,7 @@ const defaultProps = {};
 
 class ScreenSignUpEmail extends React.Component {
   state = {
-    email: 'sammy_iz_diplo@gmail.com',
+    email: 'sammy_iz_diplo@gmail.com'
   };
 
   handleEmailUpdate = email => {
@@ -25,7 +25,7 @@ class ScreenSignUpEmail extends React.Component {
     console.log(email);
 
     this.props.navigation.navigate('SignUpPassword', {
-      email: this.state.email,
+      email: this.state.email
     });
   };
 
@@ -33,11 +33,7 @@ class ScreenSignUpEmail extends React.Component {
     return (
       <Container>
         <HeaderOne>And, your email?</HeaderOne>
-        <FormGroupText
-          label={'Email'}
-          value={this.state.email}
-          handler={this.handleEmailUpdate}
-        />
+        <FormGroupText label={'Email'} value={this.state.email} handler={this.handleEmailUpdate} />
         <Btn title="Next" onPress={this.goToNext} />
       </Container>
     );

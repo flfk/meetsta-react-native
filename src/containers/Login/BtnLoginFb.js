@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Btn from "../../shared/Btn";
+import Btn from '../../components/Btn';
 
-const FACEBOOK_BLUE = "#4267B2";
+const FACEBOOK_BLUE = '#4267B2';
 
 const BtnFb = ({ title, onPress }) => {
   return (
