@@ -12,7 +12,7 @@ const BtnSec = ({ title, onPress }) => {
 };
 
 const Wrapper = Btn.Wrapper.extend`
-  background-color: transparent;
+  background-color: white;
 `;
 
 const BtnText = Btn.BtnText.extend`

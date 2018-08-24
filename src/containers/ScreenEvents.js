@@ -9,6 +9,10 @@ import ListEvents from '../components/ListEvents';
 import SectionHeader from '../components/ListSectionHeader';
 import BtnSec from '../components/BtnSecondary';
 
+import TEST_DATA from '../data/testData';
+
+const TEST_EVENTS = [TEST_DATA.db.Events.eventAndreSwiley.title];
+
 const propTypes = {};
 
 const defaultProps = {};
@@ -24,8 +28,8 @@ class Events extends React.Component {
     this.getData();
   }
 
-  getData = data => {
-    this.setState({ events: TEST_DATA_EVENTS });
+  getData = () => {
+    this.setState({ events: TEST_EVENTS });
   };
 
   goToAddEvent = () => {
@@ -36,17 +40,12 @@ class Events extends React.Component {
     return <Cell key={index}>{item}</Cell>;
   };
 
-  renderSectionHeader = ({ section: { title } }) => {
-    return <SectionHeader>{title}</SectionHeader>;
-  };
-
   render() {
     return (
       <Container>
         <ListEvents
           renderItem={this.renderItem}
-          renderSectionHeader={this.renderSectionHeader}
-          sections={this.state.events}
+          data={this.state.events}
           keyExtractor={(item, index) => item + index}
         />
         <BtnSec title="Add confirmation code" onPress={this.goToAddEvent} />

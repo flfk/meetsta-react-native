@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HeaderOne from '../../components/HeaderOne';
+import TextH1 from '../../components/TextH1';
 import Container from '../../components/ContainerTop';
 import FormGroupText from '../../components/FormGroupText';
 import Btn from '../../components/Btn';
@@ -34,7 +34,7 @@ class ScreenSignUpName extends React.Component {
   render() {
     return (
       <Container>
-        <HeaderOne>Tell us your name</HeaderOne>
+        <TextH1>Tell us your name</TextH1>
         <FormGroupText
           label={'First Name'}
           value={this.state.nameFirst}
