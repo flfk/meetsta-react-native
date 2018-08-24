@@ -8,13 +8,23 @@ import ScreenSignUpEmail from '../containers/SignUp/ScreenSignUpEmail';
 import ScreenSignUpName from '../containers/SignUp/ScreenSignUpName';
 import ScreenSignUpPassword from '../containers/SignUp/ScreenSignUpPassword';
 
+import COLORS from '../utils/Colors';
+
 const NavigatorMain = createStackNavigator(
   {
     AddTicket: ScreenAddTicket,
     Events: ScreenTickets
   },
   {
-    initialRouteName: 'Events'
+    initialRouteName: 'Events',
+    navigationOptions: {
+      headerTintColor: `${COLORS.primary.red}`,
+      headerStyle: {
+        // backgroundColor: 'white'
+        shadowColor: 'transparent',
+        borderBottomWidth: 0
+      }
+    }
   }
 );
 
@@ -40,4 +50,5 @@ const AppNavigator = createSwitchNavigator(
   }
 );
 
-export default AppNavigator;
+export default NavigatorMain;
+// export default AppNavigator;
