@@ -8,7 +8,7 @@ const propTypes = {};
 
 const defaultProps = {};
 
-const AddEvent = props => {
+const AddTicket = props => {
   return (
     <Container>
       <Text> Add confirmation code</Text>
@@ -17,4 +17,4 @@ const AddEvent = props => {
   );
 };
 
-export default AddEvent;
+export default AddTicket;
